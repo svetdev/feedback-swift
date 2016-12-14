@@ -15,6 +15,7 @@
 		A109792D1E01BEE000336053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A109792C1E01BEE000336053 /* Assets.xcassets */; };
 		A10979301E01BEE000336053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A109792E1E01BEE000336053 /* LaunchScreen.storyboard */; };
 		A109793B1E01BEE000336053 /* feedbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109793A1E01BEE000336053 /* feedbackTests.swift */; };
+		A10979461E01C0DE00336053 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10979451E01C0DE00336053 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A10979361E01BEE000336053 /* feedbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = feedbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A109793A1E01BEE000336053 /* feedbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackTests.swift; sourceTree = "<group>"; };
 		A109793C1E01BEE000336053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10979451E01C0DE00336053 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				A10979251E01BEE000336053 /* MasterViewController.swift */,
 				A10979271E01BEE000336053 /* DetailViewController.swift */,
 				A10979291E01BEE000336053 /* Main.storyboard */,
+				A10979451E01C0DE00336053 /* WebViewController.swift */,
 				A109792C1E01BEE000336053 /* Assets.xcassets */,
 				A109792E1E01BEE000336053 /* LaunchScreen.storyboard */,
 				A10979311E01BEE000336053 /* Info.plist */,
@@ -210,6 +213,7 @@
 				A10979241E01BEE000336053 /* feedback.xcdatamodeld in Sources */,
 				A10979211E01BEE000336053 /* AppDelegate.swift in Sources */,
 				A10979261E01BEE000336053 /* MasterViewController.swift in Sources */,
+				A10979461E01C0DE00336053 /* WebViewController.swift in Sources */,
 				A10979281E01BEE000336053 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
