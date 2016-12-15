@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 import WebKit
+import CoreData
 
 class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
+    var managedObjectContext: NSManagedObjectContext? = nil
     var webView: WKWebView!
     
     let formURL = "https://svetliy.herokuapp.com/contact"
@@ -71,7 +73,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         switch keyPath {
             
         case "estimatedProgress":
-            // If you are using a `UIProgressView`, this is how you update the progress
+            // updating the progress
             view.bringSubview(toFront: progressView)
             progressView.isHidden = webView.estimatedProgress == 1
             progressView.progress = Float(webView.estimatedProgress)
@@ -143,6 +145,25 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
                     completion(true)
                 }
             }
+        }
+    }
+    
+    func insertNewObject(_ sender: Any) {
+    
+        let context = self.managedObjectContext
+        let newEvent = Event(context: context!)
+        
+        // If appropriate, configure the new managed object.
+        newEvent.timestamp = NSDate()
+        
+        // Save the context.
+        do {
+            try context?.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
     

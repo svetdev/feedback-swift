@@ -67,6 +67,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
+        } else  if segue.identifier == "showForm" {
+           
+                let controller = (segue.destination as! UINavigationController).topViewController as! WebViewController
+                controller.managedObjectContext = managedObjectContext
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            
         }
     }
 

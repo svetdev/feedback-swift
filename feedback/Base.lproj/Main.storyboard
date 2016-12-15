@@ -113,10 +113,10 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
+                    <navigationItem key="navigationItem" title="Feedback" id="Zdf-7t-Un8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YKU-py-XUP">
                             <connections>
-                                <segue destination="z01-fE-Krw" kind="show" id="J7t-aG-3l9"/>
+                                <segue destination="z01-fE-Krw" kind="show" identifier="showForm" id="J7t-aG-3l9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
