@@ -42,6 +42,7 @@
 		A109793A1E01BEE000336053 /* feedbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackTests.swift; sourceTree = "<group>"; };
 		A109793C1E01BEE000336053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A10979451E01C0DE00336053 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		A10979471E03394B00336053 /* feedback.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = feedback.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		A109791F1E01BEE000336053 /* feedback */ = {
 			isa = PBXGroup;
 			children = (
+				A10979471E03394B00336053 /* feedback.entitlements */,
 				A10979201E01BEE000336053 /* AppDelegate.swift */,
 				A10979251E01BEE000336053 /* MasterViewController.swift */,
 				A10979271E01BEE000336053 /* DetailViewController.swift */,
@@ -157,6 +159,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 89R963Q7GX;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A10979351E01BEE000336053 = {
 						CreatedOnToolsVersion = 8.2;
@@ -353,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = feedback/feedback.entitlements;
 				DEVELOPMENT_TEAM = 89R963Q7GX;
 				INFOPLIST_FILE = feedback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -366,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = feedback/feedback.entitlements;
 				DEVELOPMENT_TEAM = 89R963Q7GX;
 				INFOPLIST_FILE = feedback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

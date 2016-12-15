@@ -104,6 +104,10 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
                         if (result == true){
                             self.checkInput(webView: webView, input: "message") { (result: Bool) in
                                 if (result == true){
+                                    if (navigationAction.sourceFrame != nil) {
+                                          self.insertNewObject(self)
+                                    }
+                                  
                                     decisionHandler(.allow)
                                 } else {
                                     decisionHandler(.cancel)
