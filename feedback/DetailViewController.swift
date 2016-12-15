@@ -11,13 +11,26 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
 
-
+    @IBOutlet weak var messageTextView: UITextView!
+    
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
                 label.text = detail.timestamp!.description
+            }
+            if let nLabel = self.nameLabel {
+                nLabel.text = detail.name
+            }
+            if let eLabel = self.emailLabel {
+                eLabel.text = detail.email
+            }
+            if let mText = self.messageTextView {
+                mText.text = detail.message
             }
         }
     }
@@ -33,7 +46,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: Event? {
+    var detailItem: Feedback? {
         didSet {
             // Update the view.
             self.configureView()

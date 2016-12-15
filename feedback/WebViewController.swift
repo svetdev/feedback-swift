@@ -18,6 +18,9 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     let formURL = "https://svetliy.herokuapp.com/contact"
     var formHasBeenLoaded = false
+    var nameInput = ""
+    var emailInput = ""
+    var messageInput = ""
     
     @IBOutlet var progressView: UIProgressView!
     
@@ -146,6 +149,13 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
                     }
                     completion(false)
                 } else {
+                    if input == "name" {
+                        self.nameInput = textFieldInput
+                    } else if input == "email" {
+                        self.emailInput = textFieldInput
+                    } else if input == "message" {
+                        self.messageInput = textFieldInput
+                    }
                     completion(true)
                 }
             }
@@ -156,6 +166,14 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
         let context = self.managedObjectContext
         let newEvent = Event(context: context!)
+        
+        let newFeedback = Feedback(context: context!)
+        
+        //configure the new managed object
+        newFeedback.timestamp = NSDate()
+        newFeedback.name = nameInput
+        newFeedback.email = emailInput
+        newFeedback.message = messageInput
         
         // If appropriate, configure the new managed object.
         newEvent.timestamp = NSDate()
