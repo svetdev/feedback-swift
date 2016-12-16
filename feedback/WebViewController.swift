@@ -26,14 +26,13 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addWebView()
         loadURL(url: formURL)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
             super.viewWillDisappear(animated)
-
+        //unsubscribe from kvl observing
         let webViewKeyPathsToObserve = ["estimatedProgress"]
         for keyPath in webViewKeyPathsToObserve {
             webView.removeObserver(self, forKeyPath: keyPath)
@@ -91,6 +90,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     //MARK: WKWebViewDelegate
     func webView(_ webView: WKWebView,
                           didFinish navigation: WKNavigation!){
+        //reset progress view for reuse
         progressView.setProgress(0.0, animated: false)
         if (webView.url?.absoluteString == formURL){
             formHasBeenLoaded = true
