@@ -65,17 +65,17 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZQ-0M-88p">
-                                <rect key="frame" x="16" y="72" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="72" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faQ-xv-Y4d">
-                                <rect key="frame" x="16" y="101" width="41" height="21"/>
+                                <rect key="frame" x="16" y="101" width="52" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="41" id="YaC-Cl-ZAa"/>
+                                    <constraint firstAttribute="width" constant="52" id="ek7-ij-6h1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -84,21 +84,21 @@
                         <constraints>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="TED-bd-FAW" secondAttribute="bottom" constant="8" symbolic="YES" id="0zv-8O-eMb"/>
                             <constraint firstItem="4ZQ-0M-88p" firstAttribute="baseline" secondItem="Dmo-nd-XYS" secondAttribute="baseline" id="BXk-Qx-rJu"/>
+                            <constraint firstItem="faQ-xv-Y4d" firstAttribute="baseline" secondItem="tgk-ke-mk8" secondAttribute="baseline" id="GpM-bW-rLL"/>
                             <constraint firstItem="4ZQ-0M-88p" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" symbolic="YES" id="H26-7S-55W"/>
+                            <constraint firstItem="faQ-xv-Y4d" firstAttribute="top" secondItem="4ZQ-0M-88p" secondAttribute="bottom" constant="8" symbolic="YES" id="K2U-XD-yMe"/>
                             <constraint firstItem="Dmo-nd-XYS" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="NCt-cF-2Sf"/>
-                            <constraint firstItem="faQ-xv-Y4d" firstAttribute="top" secondItem="4ZQ-0M-88p" secondAttribute="bottom" constant="8" symbolic="YES" id="PtE-MX-ipB"/>
-                            <constraint firstItem="tgk-ke-mk8" firstAttribute="leading" secondItem="faQ-xv-Y4d" secondAttribute="trailing" constant="19" id="RBW-AT-g77"/>
+                            <constraint firstItem="faQ-xv-Y4d" firstAttribute="leading" secondItem="TED-bd-FAW" secondAttribute="leading" id="RBe-P8-jRD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TED-bd-FAW" secondAttribute="trailing" constant="4" id="S5S-ja-8Va"/>
+                            <constraint firstItem="TED-bd-FAW" firstAttribute="top" secondItem="faQ-xv-Y4d" secondAttribute="bottom" constant="8" symbolic="YES" id="Ugh-Lc-eye"/>
+                            <constraint firstItem="tgk-ke-mk8" firstAttribute="leading" secondItem="faQ-xv-Y4d" secondAttribute="trailing" constant="8" symbolic="YES" id="Y2y-4l-4Dx"/>
                             <constraint firstItem="tgk-ke-mk8" firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" id="Y9Y-ck-j2a"/>
+                            <constraint firstItem="faQ-xv-Y4d" firstAttribute="leading" secondItem="4ZQ-0M-88p" secondAttribute="leading" id="YPc-0g-gkp"/>
                             <constraint firstItem="4ZQ-0M-88p" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="asb-hw-kuR"/>
                             <constraint firstItem="Dmo-nd-XYS" firstAttribute="leading" secondItem="tgk-ke-mk8" secondAttribute="leading" id="cSa-hQ-JbU"/>
                             <constraint firstItem="Dmo-nd-XYS" firstAttribute="trailing" secondItem="tgk-ke-mk8" secondAttribute="trailing" id="ezz-LD-shE"/>
-                            <constraint firstItem="4ZQ-0M-88p" firstAttribute="leading" secondItem="faQ-xv-Y4d" secondAttribute="leading" id="ilS-4b-xiM"/>
-                            <constraint firstItem="TED-bd-FAW" firstAttribute="top" secondItem="faQ-xv-Y4d" secondAttribute="bottom" constant="8" symbolic="YES" id="myw-U6-Cpu"/>
                             <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="8" symbolic="YES" id="oEA-ED-vWd"/>
                             <constraint firstItem="TED-bd-FAW" firstAttribute="leading" secondItem="0XM-y9-sOw" secondAttribute="leading" id="q1w-rb-zyb"/>
-                            <constraint firstItem="faQ-xv-Y4d" firstAttribute="baseline" secondItem="tgk-ke-mk8" secondAttribute="baseline" id="rQ5-vo-w3e"/>
-                            <constraint firstItem="faQ-xv-Y4d" firstAttribute="leading" secondItem="TED-bd-FAW" secondAttribute="leading" id="vbC-Pw-124"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
