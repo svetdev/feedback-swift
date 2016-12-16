@@ -107,25 +107,26 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
                         if (result == true){
                             self.checkInput(webView: webView, input: "message") { (result: Bool) in
                                 if (result == true){
+                                    //form navigates twice, only when sourceFrame is valid should be accepted
                                     if (navigationAction.sourceFrame != nil) {
                                           self.insertNewObject(self)
                                     }
                                   
                                     decisionHandler(.allow)
                                 } else {
-                                    decisionHandler(.cancel)
+                                    decisionHandler(.cancel)//form has to have value for message
                                 }
                             }
                         } else {
-                            decisionHandler(.cancel)
+                            decisionHandler(.cancel)//form has to have value for an email
                         }
                     }
                 } else {
-                    decisionHandler(.cancel)
+                    decisionHandler(.cancel)//form has to have value for a name
                 }
             }
         } else {
-            decisionHandler(.allow)
+            decisionHandler(.allow)//form has to be loaded
         }
         
     }
@@ -165,7 +166,6 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     func insertNewObject(_ sender: Any) {
     
         let context = self.managedObjectContext
-        let newEvent = Event(context: context!)
         
         let newFeedback = Feedback(context: context!)
         
@@ -174,9 +174,6 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         newFeedback.name = nameInput
         newFeedback.email = emailInput
         newFeedback.message = messageInput
-        
-        // If appropriate, configure the new managed object.
-        newEvent.timestamp = NSDate()
         
         // Save the context.
         do {
