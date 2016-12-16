@@ -21,7 +21,12 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.timestamp!.description
+               // NSDate().shortDate
+                let shortDate = DateFormatter()
+                shortDate.dateStyle = .long
+                shortDate.timeStyle = .long
+                let string = shortDate.string(from: detail.timestamp as! Date)
+                label.text = string
             }
             if let nLabel = self.nameLabel {
                 nLabel.text = detail.name
@@ -52,7 +57,6 @@ class DetailViewController: UIViewController {
             self.configureView()
         }
     }
-
-
 }
+
 
